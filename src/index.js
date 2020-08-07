@@ -46,10 +46,10 @@ app.delete("/goal/:id", GoalController.deleteGoalById);
 app.get("/auth", AuthController.authenticateUser);
 app.post("/auth", AuthController.insertUser);
 
-// app.get("/", (req, resp) => {
+ app.get("/", (req, resp) => {
 //   console.log(uniqueRandom(10000, 99999)());
-//   resp.send("Hello");
-// });
+   resp.send("Hello");
+ });
 
 app.listen(process.env.PORT || 3000, function() {
   console.log(
